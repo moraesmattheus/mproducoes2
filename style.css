@@ -1,0 +1,35 @@
+
+nav {
+    display: flex;
+    background-color: #888; /* Cor de fundo da barra cinza */
+    padding: 10px; /* Espaçamento interno na barra */
+    justify-content: space-around; /* Distribuir os itens igualmente */
+    width: 100%; /* Largura total */
+    position: fixed;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Cor do texto das abas */
+    font-size: 1.2em;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 10px solid #888; /* Linha cinza entre seções */
+    margin-top: 60px; /* Espaço para evitar sobreposição com a barra de navegação fixa */
+}
+
+h1 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    margin-bottom: 60px; /* Espaço abaixo do título */
+}
+
+p {
+    font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+    max-width: 600px; /* Largura máxima do parágrafo */
+    text-align: center; /* Alinhamento centralizado do texto */
+}

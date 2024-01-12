@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Produções - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        video#backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="paginainicial.html">Página Inicial</a>
+        <a href="about.html">Sobre</a>
+        <a href="skills.html">Habilidades</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="contact.html">Contato</a>
+    </nav>
+
+    <!-- Vídeo de Fundo -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="1.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <!-- Seção: Página Inicial -->
+    <section id="home">
+        <h2>Página Inicial</h2>
+        <p>Bem-vindo à minha página inicial. Explore meu mundo e descubra mais sobre meu trabalho e paixões.</p>
+    </section>
+
+    <!-- Seção: Sobre Mim -->
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Meu nome é [Seu Nome] e sou um(a) [sua profissão ou interesse]. Adoro [suas paixões ou interesses] e estou sempre em busca de novas experiências e aprendizados. Este site é um espaço onde compartilho um pouco do meu trabalho e jornada. Fique à vontade para explorar e entrar em contato!</p>
+    </section>
+
+    <!-- Seção: Habilidades -->
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <p>Aqui estão algumas das minhas habilidades principais. Sinta-se à vontade para explorar e conhecer mais sobre o que eu faço.</p>
+        <!-- Adicione mais informações sobre suas habilidades aqui -->
+    </section>
+
+    <!-- Seção: Portfólio -->
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>Acesse meu portfólio para ver mais sobre o meu trabalho.</p>
+        <!-- Adicione mais informações ou links para o seu portfólio aqui -->
+    </section>
+
+    <!-- Seção: Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Você pode entrar em contato comigo pelo email: [seu@email.com].</p>
+        <form action="seu-script-de-formulario.php" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: moraes_trabalho@outlook.com | Telefone: +55 61982106653</p>
+    </footer>
+
+    <!-- Script específico para a Página Inicial -->
+    <script>
+        // Exibe o vídeo após o carregamento da página
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("backgroundVideo").style.opacity = 1;
+        });
+
+        // Função para rolar suavemente até a seção desejada
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

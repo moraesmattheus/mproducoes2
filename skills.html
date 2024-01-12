@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Produções - Habilidades</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        /* Estilos gerais do corpo da página */
+/* Estilos gerais do corpo da página */
+body {
+    margin: 0;
+    overflow: hidden; /* Adicione esta linha para remover a barra de rolagem vertical */
+    background-image: url('bg3.png');
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+
+        /* Estilos da barra de navegação */
+nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Aumenta o índice z para garantir que a barra esteja acima de outros elementos */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilos do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(38, 38, 38, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    animation: fadeInFooter 1.5s ease-in-out forwards;
+    z-index: 1000;
+}
+
+
+
+       /* Estilos da seção de habilidades */
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    z-index: 1; /* Adicionado para garantir que este elemento não seja sobreposto */
+}
+
+/* Estilos das habilidades individuais */
+/* Estilos da seção de habilidades */
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto 120px; /* Ajuste esta linha conforme necessário */
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    z-index: 1; /* Adicionado para garantir que este elemento não seja sobreposto */
+    border-bottom: 10px solid #888; /* Linha cinza entre seções */
+}
+
+
+
+
+/* Estilos responsivos para telas pequenas */
+@media only screen and (max-width: 600px) {
+    .skill {
+        width: 100%;
+    }
+}
+
+
+        #skills h2 {
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 3em;
+            text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.8);
+            font-family: 'Quicksand', sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos do fundo de partículas */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Estilos das habilidades individuais */
+        .skill {
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            animation: fadeInSkill 1.5s ease-in-out forwards;
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.2;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            text-stroke: 1px #000;
+            -webkit-text-stroke: 1px #000;
+        }
+/* Remova a borda inferior de todas as habilidades */
+#skills {
+    border-bottom: none;
+}
+
+        .skill:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Estilos do rodapé */
+/* Estilos do rodapé */
+/* Estilos do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(38, 38, 38, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
+    color: white;
+    animation: fadeInFooter 1.5s ease-in-out forwards;
+    z-index: 1000;
+}
+
+.contact-info {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-align: center; /* Adicione esta linha para centralizar o texto dentro do rodapé */
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.contact-info {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif; /* Adicione esta linha */
+}
+
+
+
+        .contact-info {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        /* Estilos responsivos para telas pequenas */
+        @media only screen and (max-width: 600px) {
+            .skill {
+                width: 100%;
+            }
+        }
+
+        /* Animação de fade in para as habilidades */
+        @keyframes fadeInSkill {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animação de fade in para o rodapé */
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <a href="paginainicial.html">Página Inicial</a>
+        <a href="about.html">Sobre</a>
+        <a href="skills.html">Habilidades</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="contact.html">Contato</a>
+    </nav>
+
+    <!-- Fundo de partículas animadas -->
+    <section id="particles-js"></section>
+
+    <!-- Seção de habilidades -->
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skill cortes-reels">CORTES REELS</div>
+        <div class="skill transicoes">TRANSIÇÕES</div>
+        <div class="skill tratamento-de-cor">TRATAMENTO DE COR</div>
+        <div class="skill edicoes-de-clipes">EDIÇÕES DE CLIPES E PÓS PRODUÇÕES</div>
+        <div class="skill criacao-de-logo">CRIAÇÃO DE LOGO</div>
+        <div class="skill cortes">CORTES</div>
+        <div class="skill intro-com-after-effects">INTRODUÇÃO COM AFTER EFFECTS</div>
+        <div class="skill videos-com-google-earth">VÍDEOS COM O USO DO GOOGLE EARTH</div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Email: moraes_trabalho@outlook.com Telefone: +55 61 982106653</p>
+    </footer>
+
+    <!-- Script para partículas animadas -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    },
+                    image: {
+                        src: 'img/github.svg',
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

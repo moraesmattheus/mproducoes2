@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Produções - Contato</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Adiciona a fonte Quicksand do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('contato.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            justify-content: space-around;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .contact-container:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        form {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        input[type="submit"] {
+            background-color: #004cff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #cc3700;
+        }
+
+        footer {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="paginainicial.html">Página Inicial</a>
+        <a href="about.html">Sobre</a>
+        <a href="skills.html">Habilidades</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="contact.html">Contato</a>
+    </nav>
+
+    <!-- Seção: Contato -->
+    <div class="contact-container">
+        <h2>Contato</h2>
+        <p>Envie-me sua proposta ou mande um e-mail para discutirmos melhor.</p>
+        <form action="mailto:moraes_trabalho@outlook.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Enviar Mensagem">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Email: [seu@email.com] | Telefone: [seu número]</p>
+    </footer>
+</body>
+</html>
